@@ -67,21 +67,21 @@
 1. **克隆仓库**
 
    ```
-   bash复制代码git clone https://gitee.com/your-repository.git
+   git clone https://github.com/完成以后补充
    cd your-repository
    ```
 
 2. **安装后端依赖**
 
    ```
-   bash复制代码cd backend
+   cd backend
    pip install -r requirements.txt
    ```
 
 3. **安装前端依赖**
 
    ```
-   bash复制代码cd ../frontend
+   cd ../frontend
    npm install
    ```
 
@@ -99,8 +99,7 @@
      bash
      
      
-     复制代码
-     python manage.py runserver
+     manage.py runserver
      ```
 
    - 前端（Vue）：在
@@ -115,8 +114,7 @@
      bash
      
      
-     复制代码
-     npm run serve
+     run serve
      ```
 
 ------
