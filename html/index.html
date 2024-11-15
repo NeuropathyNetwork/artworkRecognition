@@ -30,6 +30,25 @@
           font-size: 3.5rem;
         }
       }
+
+      /* 夜间模式 */
+      body.night-mode {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+
+      body.night-mode .cover-container {
+        background-color: #121212;
+      }
+
+      body.night-mode .nav-link {
+        color: #e0e0e0;
+      }
+
+      body.night-mode .btn-light {
+        background-color: #333;
+        color: #e0e0e0;
+      }
     </style>
     
     <link href="index.css" rel="stylesheet">
@@ -44,6 +63,7 @@
         <a class="nav-link active" aria-current="page" href="#">Home</a>
         <a class="nav-link" href="#">Features</a>
         <a class="nav-link" href="#">Contact</a>
+        <button id="nightModeToggle" class="btn btn-light">夜间模式</button>
       </nav>
     </div>
   </header>
@@ -81,6 +101,29 @@
         reader.readAsDataURL(file);
       }
   }
+
+  // 获取夜间模式按钮
+  const nightModeToggle = document.getElementById('nightModeToggle');
+
+// 监听页面加载时检查是否启用了夜间模式
+document.addEventListener('DOMContentLoaded', function() {
+  if (localStorage.getItem('nightMode') === 'enabled') {
+    document.body.classList.add('night-mode');
+  }
+});
+
+// 点击按钮时切换夜间模式
+nightModeToggle.addEventListener('click', function() {
+  const isNightMode = document.body.classList.contains('night-mode');
+  
+  if (isNightMode) {
+    document.body.classList.remove('night-mode');
+    localStorage.setItem('nightMode', 'disabled');
+  } else {
+    document.body.classList.add('night-mode');
+    localStorage.setItem('nightMode', 'enabled');
+  }
+});
   </script>
     
   </body>
