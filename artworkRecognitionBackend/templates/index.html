@@ -1,496 +1,586 @@
 {% extends 'base.html' %}
 
-{%  block content %}
+{% block content %}
 
 
-<main class="main">
+    <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background" style="background-image: url('/static/img/home.gif'); background-size: cover; background-position: center;">
-      <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background"
+                 style="background-image: url('/static/img/home.gif'); background-size: cover; background-position: center;">
+            <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade"
+                 data-bs-ride="carousel">
 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown">Welcome to Art Analyzer</h2>
-            <p class="animate__animated fanimate__adeInUp">Upload an artwork and let our AI determine the artist behind it. Discover the genius behind the masterpiece with our advanced AI technology.</p>
-            <a href="#call-to-action" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown">Discover the Artist</h2>
-            <p class="animate__animated animate__fadeInUp">Our AI can analyze various artworks and provide insights about the artist. Upload an image and explore the world of art like never before.</p>
-            <a href="#call-to-action" class="btn-get-started animate__animated animate__fadeInUp scrollto">Upload Now</a>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown">Advanced AI Technology</h2>
-            <p class="animate__animated animate__fadeInUp">Leveraging state-of-the-art AI technology, we provide accurate and insightful analysis of artworks. Join us and uncover the secrets of art.</p>
-            <a href="#call-to-action" class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn More</a>
-          </div>
-        </div>
-
-        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-        </a>
-
-        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
-
-      </div>
-
-      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
-        <defs>
-          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-        </defs>
-        <g class="wave1">
-          <use xlink:href="#wave-path" x="50" y="3"></use>
-        </g>
-        <g class="wave2">
-          <use xlink:href="#wave-path" x="50" y="0"></use>
-        </g>
-        <g class="wave3">
-          <use xlink:href="#wave-path" x="50" y="9"></use>
-        </g>
-      </svg>
-
-    </section><!-- /Hero Section -->
-
-
-
-    <!-- Portfolio Section -->
-    <section id="artwork" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>名画</h2>
-        <p>artwork</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-vG">van Gogh</li>
-            <li data-filter=".filter-Monet">Monet</li>
-            <li data-filter=".filter-animat">Animat</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="/static/img/artworks/artwork-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>The Angel Departing from the Family of Tobias</h4>
-                <p>Rembrandt Harmenszoon van Rijn</p>
-                <a href="/static/img/artworks/artwork-1.jpg" title="The Angel Departing from the Family of Tobias 天使离开多比亚家族" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vG">
-              <img src="/static/img/artworks/artwork-2.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>The Orchard in Blossom</h4>
-                <p>Vincent van Gogh</p>
-                <a href="/static/img/artworks/artwork-2.png" title="The Orchard in Blossom 开花的果树" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="/static/img/artworks/artwork-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Castle and Sun</h4>
-                <p>Paul Klee</p>
-                <a href="/static/img/artworks/artwork-3.jpg" title="Castle and Sun 城堡和太阳" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vG">
-              <img src="/static/img/artworks/artwork-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>The Corridor of the Yellow House</h4>
-                <p>Vincent van Gogh</p>
-                <a href="/static/img/artworks/artwork-4.jpg" title="Castle and Sun 城堡和太阳" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vG">
-              <img src="/static/img/artworks/artwork-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Restaurant at Arles</h4>
-                <p>Vincent van Gogh</p>
-                <a href="/static/img/artworks/artwork-5.jpg" title="Restaurant at Arles 阿尔勒的餐厅 data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="/static/img/artworks/artwork-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>no title</h4>
-                <p>Pablo Picasso</p>
-                <a href="/static/img/artworks/artwork-6.jpg" title="no title" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-animat">
-              <img src="/static/img/artworks/soyo.gif" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Nagasaki soyo</h4>
-                <p>二十一世纪最伟大的喜剧演员</p>
-                <a href="/static/img/artworks/soyo.gif" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Monet">
-              <img src="/static/img/artworks/artwork-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>The Hills at Vétheuil</h4>
-                <p>Claude Monet</p>
-                <a href="/static/img/artworks/artwork-7.jpg" title="The Hills at Vétheuil 维特伊的山丘" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="/static/img/artworks/artwork-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Portrait of a Musician</h4>
-                <p>Leonardo da Vinci</p>
-                <a href="/static/img/artworks/artwork-8.jpg" title="Portrait of a Musician 音乐家肖像" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="/static/img/artworks/artwork-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Marilyn Monroe</h4>
-                <p>Andy Warhol</p>
-                <a href="/static/img/artworks/artwork-9.jpg" title="Marilyn Monroe 玛丽莲梦露" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Monet">
-              <img src="/static/img/artworks/artwork-10.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Giverny Scenary</h4>
-                <p>Claude Monet</p>
-                <a href="/static/img/artworks/artwork-10.jpg" title="Giverny Scenary" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="/static/img/artworks/artwork-11.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Ruins of a Monastery by the Sea</h4>
-                <p>Caspar David Friedrich</p>
-                <a href="/static/img/artworks/artwork-11.jpg" title="Ruins of a Monastery by the Sea 海边的修道院废墟" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="/static/img/artworks/artwork-12.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Carnival of Harlequin</h4>
-                <p>Joan Miró</p>
-                <a href="/static/img/artworks/artwork-12.jpg" title="Carnival of Harlequin 哈里昆的狂欢" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-animat">
-              <img src="/static/img/artworks/Nina-thanks.gif" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>thanks of nina</h4>
-                <p>/p>
-                <a href="/static/img/artworks/Nina-thanks.gif" title="Carnival of Harlequin 哈里昆的狂欢" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-animat">
-              <img src="/static/img/artworks/soyo-2.gif" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>nagasaki soyo</h4>
-                <p>なんで春日影やったの？！</p>
-                <a href="/static/img/artworks/soyo-2.gif" title="なんで春日影やったの？！ 为什么要演奏春日影？！" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-animat">
-              <img src="/static/img/artworks/soyo-3.gif" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>nagasaki soyo</h4>
-                <p>要怎么做才能回来，只要是我能做的，我什么都愿意做！</p>
-                <a href="/static/img/artworks/soyo-3.gif" title="要怎么做才能回来，只要是我能做的，我什么都愿意做！" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-
-
-        </div>
-
-      </div>
-
-    </section><!-- /Pricing Section -->
-
-
-     <!-- Testimonials Section -->
-     <section id="artists" class="testimonials section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>artists</h2>
-        <p>how much do you know about them</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 10
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/static/img/artists/artist-1.png" class="testimonial-img" alt="">
-                <h3>达芬奇</h3>
-                <h4>Leonardo da Vinci</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="carousel-container">
+                        <h2 class="animate__animated animate__fadeInDown">Welcome to Art Analyzer</h2>
+                        <p class="animate__animated fanimate__adeInUp">Upload an artwork and let our AI determine the
+                            artist behind it. Discover the genius behind the masterpiece with our advanced AI
+                            technology.</p>
+                        <a href="#call-to-action" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get
+                            Started</a>
+                    </div>
                 </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>达芬奇是文艺复兴时期的全才，集画家、科学家、发明家、解剖学家和工程师于一身。他的艺术作品以卓越的技法和深刻的人文主义精神著称，强调细腻的情感和完美的构图。他的代表作《蒙娜丽莎》和《最后的晚餐》是世界艺术史上的瑰宝。此外，他的手稿中包含众多科学发现和机械设计，展示了他对自然与技术的深刻洞察。</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/static/img/artists/artist-2.png" class="testimonial-img" alt="">
-                <h3>梵高</h3>
-                <h4>Vincent van Gogh</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="carousel-container">
+                        <h2 class="animate__animated animate__fadeInDown">Discover the Artist</h2>
+                        <p class="animate__animated animate__fadeInUp">Our AI can analyze various artworks and provide
+                            insights about the artist. Upload an image and explore the world of art like never
+                            before.</p>
+                        <a href="#call-to-action" class="btn-get-started animate__animated animate__fadeInUp scrollto">Upload
+                            Now</a>
+                    </div>
                 </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>梵高是后印象派的重要代表，以其强烈的情感表达和独特的笔触著称。他的画作充满了活力与张力，通过大胆的色彩和旋转的线条展现自然和人类情感。他在短暂的一生中创作了超过2000件艺术作品，其中包括约860幅油画，许多是他晚年在法国南部创作的。代表作包括《星空》、《向日葵》、《夜间咖啡馆》和《阿尔勒的卧室》。尽管生前几乎默默无闻，梵高在去世后成为世界上最受欢迎的艺术家之一。</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/static/img/artists/artist-3.png" class="testimonial-img" alt="">
-                <h3>莫奈</h3>
-                <h4>Claude Monet</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="carousel-container">
+                        <h2 class="animate__animated animate__fadeInDown">Advanced AI Technology</h2>
+                        <p class="animate__animated animate__fadeInUp">Leveraging state-of-the-art AI technology, we
+                            provide accurate and insightful analysis of artworks. Join us and uncover the secrets of
+                            art.</p>
+                        <a href="#call-to-action" class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn
+                            More</a>
+                    </div>
                 </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>莫奈是印象派的创始人之一，以对光线和色彩的独特表现方式闻名。他的作品注重捕捉自然景观中的瞬间印象，常使用快速的笔触和细腻的色彩过渡。他的代表作《印象·日出》被认为是“印象派”命名的来源。此外，他还创作了《睡莲》系列、《鲁昂大教堂》和《干草堆》系列，通过反复描绘相同主题来展现光线的变化对场景的影响。</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/static/img/artists/artist-4.png" class="testimonial-img" alt="">
-                <h3>毕加索</h3>
-                <h4>Pablo Picasso</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>毕加索是20世纪最具影响力的艺术家之一，其风格跨越多个阶段和流派。他是立体派的共同创始人，并推动了现代艺术的发展。他的创作生涯极为丰富，涵盖绘画、雕塑、版画、陶艺和舞台设计等领域。早期的“蓝色时期”和“玫瑰时期”以情感深刻的主题和柔和的色调为主，而立体派作品如《亚威农少女》则通过几何化的形式解构传统美学。他的另一代表作《格尔尼卡》则以超现实主义手法谴责战争的残酷。</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+                <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+                </a>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="/static/img/artists/artist-5.png" class="testimonial-img" alt="">
-                <h3>卢梭</h3>
-                <h4>Henri Rousseau</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>亨利·卢梭是一位自学成才的画家，以其独特的原始主义风格闻名。他曾是巴黎的关税官员，后来专注于艺术创作，因其看似天真的构图和强烈的色彩对比而受到后世推崇。他的作品充满梦幻与象征主义，经常描绘异国情调的丛林景象，尽管他从未离开法国。代表作包括《梦》、《饥饿的狮子袭击羚羊》和《蛇使者》。尽管生前常被嘲笑，他的艺术后来被超现实主义者奉为灵感源泉。</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <div class="container">
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-9 text-center text-xl-start">
-            <h3>Analyze the Artwork</h3>
-            <p>Upload an image of an artwork and let our AI analyze it to determine the artist. Discover the creator behind the masterpiece with advanced AI technology.</p>
-          </div>
-          <div class="col-xl-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Upload Image</a>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Call To Action Section -->
-
-      <!-- Faq Section -->
-    <section id="faq" class="faq section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <p>Common questions about our AI art analysis service</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-12">
-            <div class="custom-accordion" id="accordion-faq">
-              <div class="accordion-item">
-                <h2 class="mb-0">
-                  <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-1">
-                    How does the AI determine the artist of an artwork?
-                  </button>
-                </h2>
-
-                <div id="collapse-faq-1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion-faq">
-                  <div class="accordion-body">
-                    Our AI uses advanced machine learning algorithms trained on a vast dataset of artworks to analyze the style, technique, and other features of the uploaded image. It then compares these features to known works by various artists to determine the most likely creator.
-                  </div>
-                </div>
-              </div>
-              <!-- .accordion-item -->
-
-              <div class="accordion-item">
-                <h2 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-2">
-                    What types of artworks can the AI analyze?
-                  </button>
-                </h2>
-                <div id="collapse-faq-2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-faq">
-                  <div class="accordion-body">
-                    The AI can analyze a wide range of artworks, including paintings, drawings, and digital art. However, it performs best with high-quality images that clearly show the details of the artwork.
-                  </div>
-                </div>
-              </div>
-              <!-- .accordion-item -->
-
-              <div class="accordion-item">
-                <h2 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-3">
-                    How accurate is the AI in identifying the artist?
-                  </button>
-                </h2>
-
-                <div id="collapse-faq-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-faq">
-                  <div class="accordion-body">
-                    The accuracy of the AI depends on the quality of the uploaded image and the distinctiveness of the artist's style. While the AI is highly accurate with well-known artists and clear images, it may have difficulty with lesser-known artists or poor-quality images.
-                  </div>
-                </div>
-              </div>
-              <!-- .accordion-item -->
-
-              <div class="accordion-item">
-                <h2 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-4">
-                    Is there a limit to the number of images I can upload?
-                  </button>
-                </h2>
-
-                <div id="collapse-faq-4" class="collapse" aria-labelledby="headingFour" data-parent="#accordion-faq">
-                  <div class="accordion-body">
-                    Currently, there is no limit to the number of images you can upload for analysis. However, please be mindful of the server load and try to avoid uploading large batches of images at once.
-                  </div>
-                </div>
-              </div>
-              <!-- .accordion-item -->
+                <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+                </a>
 
             </div>
-          </div>
+
+            <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 24 150 28 " preserveAspectRatio="none">
+                <defs>
+                    <path id="wave-path"
+                          d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                </defs>
+                <g class="wave1">
+                    <use xlink:href="#wave-path" x="50" y="3"></use>
+                </g>
+                <g class="wave2">
+                    <use xlink:href="#wave-path" x="50" y="0"></use>
+                </g>
+                <g class="wave3">
+                    <use xlink:href="#wave-path" x="50" y="9"></use>
+                </g>
+            </svg>
+
+        </section><!-- /Hero Section -->
+
+
+        <!-- Portfolio Section -->
+        <section id="artwork" class="portfolio section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>名画</h2>
+                <p>artwork</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-vG">van Gogh</li>
+                        <li data-filter=".filter-Monet">Monet</li>
+                        <li data-filter=".filter-animat">Animat</li>
+                    </ul><!-- End Portfolio Filters -->
+
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="/static/img/artworks/artwork-1.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>The Angel Departing from the Family of Tobias</h4>
+                                <p>Rembrandt Harmenszoon van Rijn</p>
+                                <a href="/static/img/artworks/artwork-1.jpg"
+                                   title="The Angel Departing from the Family of Tobias 天使离开多比亚家族"
+                                   data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vG">
+                            <img src="/static/img/artworks/artwork-2.png" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>The Orchard in Blossom</h4>
+                                <p>Vincent van Gogh</p>
+                                <a href="/static/img/artworks/artwork-2.png" title="The Orchard in Blossom 开花的果树"
+                                   data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="/static/img/artworks/artwork-3.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Castle and Sun</h4>
+                                <p>Paul Klee</p>
+                                <a href="/static/img/artworks/artwork-3.jpg" title="Castle and Sun 城堡和太阳"
+                                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vG">
+                            <img src="/static/img/artworks/artwork-4.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>The Corridor of the Yellow House</h4>
+                                <p>Vincent van Gogh</p>
+                                <a href="/static/img/artworks/artwork-4.jpg" title="Castle and Sun 城堡和太阳"
+                                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vG">
+                            <img src="/static/img/artworks/artwork-5.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Restaurant at Arles</h4>
+                                <p>Vincent van Gogh</p>
+                                <a href="/static/img/artworks/artwork-5.jpg"
+                                   title="Restaurant at Arles 阿尔勒的餐厅" data-gallery=" portfolio-gallery-product"
+                                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="/static/img/artworks/artwork-6.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>no title</h4>
+                                <p>Pablo Picasso</p>
+                                <a href="/static/img/artworks/artwork-6.jpg" title="no title"
+                                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-animat">
+                            <img src="/static/img/artworks/soyo.gif" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Nagasaki soyo</h4>
+                                <p>二十一世纪最伟大的喜剧演员</p>
+                                <a href="/static/img/artworks/soyo.gif" title="App 3"
+                                   data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Monet">
+                            <img src="/static/img/artworks/artwork-7.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>The Hills at Vétheuil</h4>
+                                <p>Claude Monet</p>
+                                <a href="/static/img/artworks/artwork-7.jpg" title="The Hills at Vétheuil 维特伊的山丘"
+                                   data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="/static/img/artworks/artwork-8.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Portrait of a Musician</h4>
+                                <p>Leonardo da Vinci</p>
+                                <a href="/static/img/artworks/artwork-8.jpg" title="Portrait of a Musician 音乐家肖像"
+                                   data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="/static/img/artworks/artwork-9.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Marilyn Monroe</h4>
+                                <p>Andy Warhol</p>
+                                <a href="/static/img/artworks/artwork-9.jpg" title="Marilyn Monroe 玛丽莲梦露"
+                                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Monet">
+                            <img src="/static/img/artworks/artwork-10.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Giverny Scenary</h4>
+                                <p>Claude Monet</p>
+                                <a href="/static/img/artworks/artwork-10.jpg" title="Giverny Scenary"
+                                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="/static/img/artworks/artwork-11.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Ruins of a Monastery by the Sea</h4>
+                                <p>Caspar David Friedrich</p>
+                                <a href="/static/img/artworks/artwork-11.jpg"
+                                   title="Ruins of a Monastery by the Sea 海边的修道院废墟"
+                                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="/static/img/artworks/artwork-12.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Carnival of Harlequin</h4>
+                                <p>Joan Miró</p>
+                                <a href="/static/img/artworks/artwork-12.jpg" title="Carnival of Harlequin 哈里昆的狂欢"
+                                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-animat">
+                            <img src="/static/img/artworks/Nina-thanks.gif" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>thanks of nina</h4>
+                                <p>/p>
+                                    <a href="/static/img/artworks/Nina-thanks.gif"
+                                       title="Carnival of Harlequin 哈里昆的狂欢"
+                                       data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                            class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-animat">
+                            <img src="/static/img/artworks/soyo-2.gif" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>nagasaki soyo</h4>
+                                <p>なんで春日影やったの？！</p>
+                                <a href="/static/img/artworks/soyo-2.gif"
+                                   title="なんで春日影やったの？！ 为什么要演奏春日影？！"
+                                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-animat">
+                            <img src="/static/img/artworks/soyo-3.gif" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>nagasaki soyo</h4>
+                                <p>要怎么做才能回来，只要是我能做的，我什么都愿意做！</p>
+                                <a href="/static/img/artworks/soyo-3.gif"
+                                   title="要怎么做才能回来，只要是我能做的，我什么都愿意做！"
+                                   data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                    </div><!-- End Portfolio Container -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Portfolio Section -->
+
+
         </div>
-      </div>
-    </section><!-- /Faq Section -->
+
+        </div>
+
+        </section><!-- /Pricing Section -->
 
 
+        <!-- Testimonials Section -->
+        <section id="artists" class="testimonials section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>artists</h2>
+                <p>how much do you know about them</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                          "loop": true,
+                          "speed": 600,
+                          "autoplay": {
+                            "delay": 5000
+                          },
+                          "slidesPerView": "auto",
+                          "pagination": {
+                            "el": ".swiper-pagination",
+                            "type": "bullets",
+                            "clickable": true
+                          },
+                          "breakpoints": {
+                            "320": {
+                              "slidesPerView": 1,
+                              "spaceBetween": 40
+                            },
+                            "1200": {
+                              "slidesPerView": 3,
+                              "spaceBetween": 10
+                            }
+                          }
+                        }
+                    </script>
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="/static/img/artists/artist-1.png" class="testimonial-img" alt="">
+                                <h3>达芬奇</h3>
+                                <h4>Leonardo da Vinci</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>达芬奇是文艺复兴时期的全才，集画家、科学家、发明家、解剖学家和工程师于一身。他的艺术作品以卓越的技法和深刻的人文主义精神著称，强调细腻的情感和完美的构图。他的代表作《蒙娜丽莎》和《最后的晚餐》是世界艺术史上的瑰宝。此外，他的手稿中包含众多科学发现和机械设计，展示了他对自然与技术的深刻洞察。</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="/static/img/artists/artist-2.png" class="testimonial-img" alt="">
+                                <h3>梵高</h3>
+                                <h4>Vincent van Gogh</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>梵高是后印象派的重要代表，以其强烈的情感表达和独特的笔触著称。他的画作充满了活力与张力，通过大胆的色彩和旋转的线条展现自然和人类情感。他在短暂的一生中创作了超过2000件艺术作品，其中包括约860幅油画，许多是他晚年在法国南部创作的。代表作包括《星空》、《向日葵》、《夜间咖啡馆》和《阿尔勒的卧室》。尽管生前几乎默默无闻，梵高在去世后成为世界上最受欢迎的艺术家之一。</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="/static/img/artists/artist-3.png" class="testimonial-img" alt="">
+                                <h3>莫奈</h3>
+                                <h4>Claude Monet</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>莫奈是印象派的创始人之一，以对光线和色彩的独特表现方式闻名。他的作品注重捕捉自然景观中的瞬间印象，常使用快速的笔触和细腻的色彩过渡。他的代表作《印象·日出》被认为是“印象派”命名的来源。此外，他还创作了《睡莲》系列、《鲁昂大教堂》和《干草堆》系列，通过反复描绘相同主题来展现光线的变化对场景的影响。</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="/static/img/artists/artist-4.png" class="testimonial-img" alt="">
+                                <h3>毕加索</h3>
+                                <h4>Pablo Picasso</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>毕加索是20世纪最具影响力的艺术家之一，其风格跨越多个阶段和流派。他是立体派的共同创始人，并推动了现代艺术的发展。他的创作生涯极为丰富，涵盖绘画、雕塑、版画、陶艺和舞台设计等领域。早期的“蓝色时期”和“玫瑰时期”以情感深刻的主题和柔和的色调为主，而立体派作品如《亚威农少女》则通过几何化的形式解构传统美学。他的另一代表作《格尔尼卡》则以超现实主义手法谴责战争的残酷。</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="/static/img/artists/artist-5.png" class="testimonial-img" alt="">
+                                <h3>卢梭</h3>
+                                <h4>Henri Rousseau</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>亨利·卢梭是一位自学成才的画家，以其独特的原始主义风格闻名。他曾是巴黎的关税官员，后来专注于艺术创作，因其看似天真的构图和强烈的色彩对比而受到后世推崇。他的作品充满梦幻与象征主义，经常描绘异国情调的丛林景象，尽管他从未离开法国。代表作包括《梦》、《饥饿的狮子袭击羚羊》和《蛇使者》。尽管生前常被嘲笑，他的艺术后来被超现实主义者奉为灵感源泉。</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+        </section><!-- /Testimonials Section -->
+
+        <!-- Call To Action Section -->
+        <section id="call-to-action" class="call-to-action section dark-background">
+
+            <div class="container">
+
+                <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-xl-9 text-center text-xl-start">
+                        <h3>Analyze the Artwork</h3>
+                        <p>Upload an image of an artwork and let our AI analyze it to determine the artist. Discover the
+                            creator behind the masterpiece with advanced AI technology.</p>
+                    </div>
+                    <div class="col-xl-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="#">Upload Image</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Call To Action Section -->
+
+        <!-- Faq Section -->
+        <section id="faq" class="faq section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about our AI art analysis service</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="custom-accordion" id="accordion-faq">
+                            <div class="accordion-item">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse-faq-1">
+                                        How does the AI determine the artist of an artwork?
+                                    </button>
+                                </h2>
+
+                                <div id="collapse-faq-1" class="collapse show" aria-labelledby="headingOne"
+                                     data-parent="#accordion-faq">
+                                    <div class="accordion-body">
+                                        Our AI uses advanced machine learning algorithms trained on a vast dataset of
+                                        artworks to analyze the style, technique, and other features of the uploaded
+                                        image. It then compares these features to known works by various artists to
+                                        determine the most likely creator.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- .accordion-item -->
+
+                            <div class="accordion-item">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse-faq-2">
+                                        What types of artworks can the AI analyze?
+                                    </button>
+                                </h2>
+                                <div id="collapse-faq-2" class="collapse" aria-labelledby="headingTwo"
+                                     data-parent="#accordion-faq">
+                                    <div class="accordion-body">
+                                        The AI can analyze a wide range of artworks, including paintings, drawings, and
+                                        digital art. However, it performs best with high-quality images that clearly
+                                        show the details of the artwork.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- .accordion-item -->
+
+                            <div class="accordion-item">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse-faq-3">
+                                        How accurate is the AI in identifying the artist?
+                                    </button>
+                                </h2>
+
+                                <div id="collapse-faq-3" class="collapse" aria-labelledby="headingThree"
+                                     data-parent="#accordion-faq">
+                                    <div class="accordion-body">
+                                        The accuracy of the AI depends on the quality of the uploaded image and the
+                                        distinctiveness of the artist's style. While the AI is highly accurate with
+                                        well-known artists and clear images, it may have difficulty with lesser-known
+                                        artists or poor-quality images.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- .accordion-item -->
+
+                            <div class="accordion-item">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse-faq-4">
+                                        Is there a limit to the number of images I can upload?
+                                    </button>
+                                </h2>
+
+                                <div id="collapse-faq-4" class="collapse" aria-labelledby="headingFour"
+                                     data-parent="#accordion-faq">
+                                    <div class="accordion-body">
+                                        Currently, there is no limit to the number of images you can upload for
+                                        analysis. However, please be mindful of the server load and try to avoid
+                                        uploading large batches of images at once.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- .accordion-item -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Faq Section -->
 
 
-
-  </main>
+    </main>
 
 {% endblock %}
