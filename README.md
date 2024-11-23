@@ -132,16 +132,20 @@
 
 ## 团队分工
 
-- **组长**：项目管理、后端开发、仓库初始化
-- **成员A**：前端设计与实现
-- **成员B**：前端设计与实现
-- **成员C**：后端开发与数据处理
+- **王子琳**：项目管理、后端开发、仓库初始化
+- **缪纬韬**：前端设计与实现
+- **时晓天**：前端设计与实现
+- **陈正元**：后端开发与数据处理
 
 ------
 
 ## 项目展示
 
 将在项目完成后发布演示视频和图片，以展示项目的最终功能。
+![ebbf3b4a5aa0732c528b0bcac839e7c1](https://github.com/user-attachments/assets/793eee10-26d0-4b23-9a5e-23ffc371bcdc)
+![defa7f939daa792021d307002108bb6c](https://github.com/user-attachments/assets/3333cd6a-7fe1-4cfe-b1ae-dccd93012f4e)
+![c4b8a24bf741856cbc6b5dabe470f47a](https://github.com/user-attachments/assets/da76ae85-1a4f-4d75-b0a5-9b43d2cfb144)
+![02c76e024cedefb45fcc267ffd276b55](https://github.com/user-attachments/assets/88716ff6-3be3-417f-9ea1-6a8983738cd6)
 
 ------
 
