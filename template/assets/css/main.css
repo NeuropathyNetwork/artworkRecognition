@@ -2558,3 +2558,26 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+/*白字黑底*/
+.carousel-container h2,
+  .carousel-container p {
+  color: #fff; /* 设置文字颜色 */
+  text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 40px #000, 0 0 80px #000; /* 发光效果 */
+  }
+
+  /*居中显示输入图片部分*/
+.upload-section {
+  display: flex; /* 启用 Flex 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  text-align: center; /* 内容文字居中 */
+  height: 100vh; /* 占据整个视窗高度 */
+}
+
+.Upload.picture {
+  max-width: 600px; /* 限制宽度 */
+  padding: 20px; /* 添加内边距 */
+  background-color: #f8f9fa; /* 可选：为上传区域添加背景 */
+  border-radius: 10px; /* 圆角效果 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 可选：添加阴影效果 */
+}
