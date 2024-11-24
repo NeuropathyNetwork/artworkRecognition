@@ -467,9 +467,7 @@
 
         <!-- Call To Action Section -->
         <section id="call-to-action" class="call-to-action section dark-background">
-
             <div class="container">
-
                 <div class="row" data-aos="zoom-in" data-aos-delay="100">
                     <div class="col-xl-9 text-center text-xl-start">
                         <h3>Analyze the Artwork</h3>
@@ -477,13 +475,15 @@
                             creator behind the masterpiece with advanced AI technology.</p>
                     </div>
                     <div class="col-xl-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="#">Upload Image</a>
+                        <!-- Form for file upload -->
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="artwork" accept="image/*" required>
+                            <button class="cta-btn align-middle" type="submit">Upload Image</button>
+                        </form>
                     </div>
                 </div>
-
             </div>
-
-        </section><!-- /Call To Action Section -->
+        </section>
 
         <!-- Faq Section -->
         <section id="faq" class="faq section">
