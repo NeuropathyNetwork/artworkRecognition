@@ -2582,3 +2582,84 @@ section,
     border-radius: 10px; /* 圆角效果 */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 可选：添加阴影效果 */
 }
+
+
+
+/*analyze文件中的格式*/
+.analyze {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f9fa; /* 背景色，可根据需要调整 */
+    padding: 20px;
+    text-align: center; /* 文本居中 */
+}
+
+.analyze h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.analyze p.lead {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.analyze a.btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.analyze a.btn:hover {
+    background-color: #e9ecef; /* 鼠标悬停时按钮背景色 */
+    color: #212529; /* 鼠标悬停时文本颜色 */
+}
+
+#imageContainer {
+    margin-top: 20px;
+    max-width: 600px;
+    text-align: center;
+    border: 2px dashed #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#imageContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.analyze ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left; /* 列表内容左对齐 */
+}
+
+.analyze ul > li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #212529;
+}
+
+.analyze ul ul {
+    margin-left: 20px;
+}
+
+.analyze ul ul li {
+    font-size: 0.9rem;
+    color: #495057;
+}

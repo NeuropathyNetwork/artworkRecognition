@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <main class="analyze">
+        <h1>请上传你需要识别的画作</h1>
+        <p class="lead">“抽象是艺术史上的自然进步，然而算法捕捉到了这一点”</p>
+        <p class="lead"><!-- 按钮，点击时触发文件选择器 -->
+        <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white" style="color: #212529;" onclick="document.getElementById('fileInput').click();">上传图片</a>
+        <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="handleFileUpload(event)" /><!-- 隐藏的文件输入框，点击按钮时触发 -->
+        </p><!-- 图片上传后显示的容器 -->
+        <div id="imageContainer"></div>
+
+        <ul>
+          <li><strong>Author Name:</strong> {{ result.author_name }}</li>
+          <li><strong>Profession:</strong> {{ result.profession }}</li>
+          <li><strong>Bio:</strong> {{ result.bio }}</li>
+          <li><strong>Notable Works:</strong>
+              <ul>
+                  {% for work in result.notable_works %}
+                  <li>{{ work }}</li>
+                  {% endfor %}
+              </ul>
+          </li>
+          <li><strong>Birthday:</strong> {{ result.birthday }}</li>
+          <li><strong>Deathday:</strong> {{ result.deathday }}</li>
+        </ul>
+  </main>
+
+    <script>
+    function handleFileUpload(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement('img');                        // 创建文件读取器
+                img.src = e.target.result;
+                img.style.maxWidth = '500px';                                     // 设置图片最大宽度和高度
+                img.style.maxHeight = '500px'; 
+                img.style.marginTop = '20px';                                     // 设置图片顶部边距
+                const imageContainer = document.getElementById('imageContainer'); // 获取图片显示容器
+                imageContainer.innerHTML = '';                                    // 清空容器中的现有内容
+                imageContainer.appendChild(img);                                  // 将新上传的图片添加到容器中
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+  </script>
+    
+  </body>
+
+{% endblock %}
