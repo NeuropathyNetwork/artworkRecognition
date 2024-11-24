@@ -1,6 +1,25 @@
 {% extends 'base.html' %}
 {% block header %}
-    {% include 'header.html' %}
+    <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+        <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="/static/img/logo.png" alt=""> -->
+            <h1 class="sitename">看画猜作者</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'analyze' %}" class="active">Upload</a></li>
+                <li><a href="https://gitee.com/gaopursuit">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+    </div>
+</header>
 {% endblock %}
 
 {% block content %}
