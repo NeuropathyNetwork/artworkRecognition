@@ -21,5 +21,6 @@ from artRecognition import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', include('artRecognition.urls')),
-    path('', views.index, name="index")
+    path('', views.index, name="index"),
+    path('analyze/', views.analyze, name="analyze"),
 ]
