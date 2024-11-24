@@ -117,21 +117,21 @@
     margin-bottom: 50px;
 }
 
-.testimonial-item .quote-icon-left,
-.testimonial-item .quote-icon-right {
+.testimonial-item quote-icon-left,
+.testimonial-item quote-icon-right {
     color: color-mix(in srgb, var(--accent-color), transparent 50%);
     font-size: 26px;
     line-height: 0;
 }
 
-.testimonial-item .quote-icon-left {
+.testimonial-item quote-icon-left {
     display: inline-block;
     left: -5px;
     position: relative;
 }
 
 
-.testimonial-item .quote-icon-right {
+.testimonial-item quote-icon-right {
     display: inline-block;
     right: -5px;
     position: relative;
@@ -139,7 +139,7 @@
     transform: scale(-1, -1);
 }
 
-.testimonial-item .testimonial-img {
+.testimonial-item testimonial-img {
     width: 90px;
     border-radius: 50px;
     border: 6px solid var(--background-color);
