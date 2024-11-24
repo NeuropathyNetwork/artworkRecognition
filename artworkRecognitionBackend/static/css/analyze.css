@@ -1,0 +1,111 @@
+/* 整体布局 */
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;      /* 左对齐布局 */
+    justify-content: flex-start;  /* 从上到下排列 */
+    height: 10vh;
+    background-color: #002141;    /* 深蓝色背景 */
+    color: white;                 /* 白色文字 */
+    padding: 20px;                /* 页面内边距 */
+    box-sizing: border-box;
+}
+
+
+.analyze {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* 左对齐布局 */
+    justify-content: flex-start;  /* 从上到下排列 */
+    height: 100vh;
+    background-color: #002141;    /* 深蓝色背景 */
+    color: white;                 /* 白色文字 */
+    padding: 20px;                /* 页面内边距 */
+    box-sizing: border-box;
+}
+
+/* 标题样式 */
+.analyze h1 {
+    margin-bottom: 30px;      /* 标题底部外边距 */
+    font-size: 48px;          /* 标题字体大小 */
+    font-weight: 700;         /* 标题字体粗细 */
+    color: #ffffff;           /* 标题字体颜色 */
+    margin: 0 auto 30px;
+}
+
+/* 引言样式 */
+.analyze p.lead {
+    font-size: 20px;
+    max-width: 80%;
+    margin: 0 auto 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* 设置上传按钮样式 */
+.cover-container .btn {
+    background: #ffffff;         /* 按钮背景颜色 */
+    color: #212529;              /* 按钮文字颜色 */
+    border: 2px solid #ffffff;   /* 按钮边框 */
+    padding: 10px 20px;          /* 按钮内边距 */
+    border-radius: 5px;          /* 圆角按钮 */
+    font-size: 1.2rem;           /* 按钮字体大小 */
+    text-transform: uppercase;   /* 转为大写字母 */
+    transition: all 0.3s ease;   /* 添加平滑过渡效果 */
+}
+
+/* 按钮悬停样式 */
+.cover-container .btn:hover {
+    background: #f8f9fa;  /* 浅灰色背景 */
+    color: #001f3f;       /* 深蓝色文字 */
+    border-color: #f8f9fa;
+}
+
+/* 上传图片的容器样式 */
+.analyze #imageContainer {
+    display: flex;               /* 使用 Flexbox 布局 */
+    justify-content: center;     /* 水平居中 */
+    align-items: center;         /* 垂直居中 */
+    margin-top: 20px;            /* 顶部间距 */
+    width: 100%;                 /* 占满父容器宽度 */
+    text-align: center;          /* 内容文字居中 */
+}
+
+.analyze #imageContainer img {
+    max-width: 500px;            /* 图片最大宽度 */
+    max-height: 500px;           /* 图片最大高度 */
+    margin-top: 20px;            /* 图片顶部间距 */
+    border: 2px solid white;     /* 图片边框 */
+    border-radius: 10px;         /* 圆角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 添加阴影 */
+}
+
+/* 列表样式 */
+.analyze ul {
+    list-style: none;             /* 移除默认列表样式 */
+    margin-top: 30px;             /* 顶部间距 */
+    margin-left: -50%;             /* 左侧偏移四分之一 */
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.analyze ul > li {
+    margin-bottom: 10px;          /* 列表项间距 */
+}
+
+/* 嵌套子列表样式 */
+.analyze ul ul {
+    margin-left: 20px;            /* 嵌套列表的缩进 */
+    list-style: disc;             /* 嵌套列表使用圆点样式 */
+}
+
+/* 列表项加粗内容 */
+.analyze ul li strong {
+    color: #f8f9fa;               /* 强调部分颜色 */
+}
+
+/* 隐藏文件选择器 */
+.analyze input[type="file"] {
+    display: none;
+}
