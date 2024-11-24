@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <main class="analyze">
+    <main class="main analyze">
         <h1>请上传你需要识别的画作</h1>
         <p class="lead">“抽象是艺术史上的自然进步，然而算法捕捉到了这一点”</p>
         <p class="lead"><!-- 按钮，点击时触发文件选择器 -->
@@ -36,7 +36,7 @@
                 const img = document.createElement('img');                        // 创建文件读取器
                 img.src = e.target.result;
                 img.style.maxWidth = '500px';                                     // 设置图片最大宽度和高度
-                img.style.maxHeight = '500px'; 
+                img.style.maxHeight = '500px';
                 img.style.marginTop = '20px';                                     // 设置图片顶部边距
                 const imageContainer = document.getElementById('imageContainer'); // 获取图片显示容器
                 imageContainer.innerHTML = '';                                    // 清空容器中的现有内容
