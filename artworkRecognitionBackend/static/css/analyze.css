@@ -1,3 +1,8 @@
+:root {
+    --background-color: #002141;
+    --default-color: #002141; /* 示例值，可以根据需要调整 */
+}
+
 /* 整体布局 */
 .block {
     display: flex;
@@ -17,7 +22,6 @@
     flex-direction: column;
     align-items: center;      /* 左对齐布局 */
     justify-content: flex-start;  /* 从上到下排列 */
-    height: 100vh;
     background-color: #002141;    /* 深蓝色背景 */
     color: white;                 /* 白色文字 */
     padding: 20px;                /* 页面内边距 */
@@ -110,46 +114,49 @@
     display: none;
 }
 
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* 左对齐布局 */
+    justify-content: flex-start;  /* 从上到下排列 */
+    background-color: #002141;    /* 深蓝色背景 */
+    color: #002141;    
+    padding: 20px;                /* 页面内边距 */
+    box-sizing: border-box;
+}
+
 .testimonial-item {
-    padding: 30px 30px 0 30px;
-    position: relative;
-    background: color-mix(in srgb, var(--default-color), transparent 97%);
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* 左对齐布局 */
+    justify-content: flex-start;  /* 从上到下排列 */
+    padding: 20px;                /* 页面内边距 */
+    box-sizing: border-box;
+}
+.testimonial-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* 发光效果 */
 }
 
-.testimonial-item quote-icon-left,
-.testimonial-item quote-icon-right {
-    color: color-mix(in srgb, var(--accent-color), transparent 50%);
-    font-size: 26px;
-    line-height: 0;
-}
-
-.testimonial-item quote-icon-left {
-    display: inline-block;
-    left: -5px;
-    position: relative;
-}
-
-
-.testimonial-item quote-icon-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
-    transform: scale(-1, -1);
+.testimonial-item h4 {
+    font-size: 14px;
+    margin: 0;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* 发光效果 */
 }
 
 .testimonial-item testimonial-img {
     width: 90px;
     border-radius: 50px;
-    border: 6px solid var(--background-color);
+    border: 6px solid var(#002141);
     float: left;
     margin: 0 10px 0 0;
 }
 .testimonial-img {
     width: 90px;
-    border-radius: 50px;
-    border: 6px solid var(--background-color);
+    border-radius: 50%;
+    border: 6px solid #002141; /* 使用背景色的一致值 */
     float: left;
     margin: 0 10px 0 0;
 }
