@@ -19,8 +19,8 @@ from django.urls import path, include
 from artRecognition import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('index/', include('artRecognition.urls')),
-    path('', views.index, name="index"),
-    path('analyze/', views.analyze, name="analyze"),
-]
+                  path('admin/', admin.site.urls),
+                  path('index/', include('artRecognition.urls')),
+                  path('', views.index, name="index"),
+                  path('analyze/', views.analyze, name="analyze"),
+              ]

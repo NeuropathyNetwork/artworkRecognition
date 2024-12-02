@@ -32,13 +32,20 @@
         <section class="analyze">
             <h1>请上传你需要识别的画作</h1>
             <p class="lead">“抽象是艺术史上的自然进步，然而算法捕捉到了这一点”</p>
-            <p class="lead"><!-- 按钮，点击时触发文件选择器 -->
-                <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white" style="color: #212529;"
-                   onclick="document.getElementById('fileInput').click();">上传图片</a>
-                <input type="file" id="fileInput" style="display: none;" accept="image/*"
-                       onchange="handleFileUpload(event)"/><!-- 隐藏的文件输入框，点击按钮时触发 -->
-            </p><!-- 图片上传后显示的容器 -->
-            <div id="imageContainer"></div>
+            <form id="uploadForm" action="{% url 'analyze' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p class="lead">
+                    <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white" style="color: #212529;"
+                       onclick="document.getElementById('fileInput').click();">上传图片</a>
+                    <input type="file" id="fileInput" name="image" style="display: none;" accept="image/*"
+                           onchange="document.getElementById('uploadForm').submit();"/>
+                </p>
+            </form>
+            <div id="imageContainer">
+                {% if image_url %}
+                    <img src="{{ image_url }}" alt="Uploaded Image" style="max-width: 500px; max-height: 500px; margin-top: 20px;">
+                {% endif %}
+            </div>
             <div class="testimonial-item">
                 <div class="testimonial-item">
                     <p>
@@ -54,9 +61,8 @@
                 </div>
             </div>
             <ul>
-                <li><strong>Author Name:</strong> {{ result.author_name }}</li>
-                <li><strong>Profession:</strong> {{ result.profession }}</li>
-                <li><strong>Bio:</strong> {{ result.bio }}</li>
+                <li><strong>Author Name:</strong> {{ result.author }}</li>
+
                 <li><strong>Notable Works:</strong>
                     <ul>
                         {% for work in result.notable_works %}
@@ -64,8 +70,8 @@
                         {% endfor %}
                     </ul>
                 </li>
-                <li><strong>Birthday:</strong> {{ result.birthday }}</li>
-                <li><strong>Deathday:</strong> {{ result.deathday }}</li>
+                <li><strong>Birthday:</strong> {{ result.birth_date }}</li>
+                <li><strong>Deathday:</strong> {{ result.death_date }}</li>
             </ul>
         </section>
     </main>
