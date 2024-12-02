@@ -134,6 +134,7 @@
     box-sizing: border-box;
 }
 .testimonial-item h3 {
+    margin-left: -75%;  
     font-size: 18px;
     font-weight: bold;
     margin: 10px 0 5px 0;
@@ -141,6 +142,7 @@
 }
 
 .testimonial-item h4 {
+    margin-left: -75%;  
     font-size: 14px;
     margin: 0;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* 发光效果 */
