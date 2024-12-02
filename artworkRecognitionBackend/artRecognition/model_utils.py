@@ -84,3 +84,4 @@ def load_model():
     model = model.to(device)
     pth = 'static\\resnet1722.pth'
     model.load_state_dict(torch.load(pth, weights_only=True, map_location=torch.device('cpu')))
+    return model
