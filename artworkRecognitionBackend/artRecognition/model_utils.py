@@ -56,6 +56,6 @@ def load_model():
     num_trs = model.classifier[1].in_features
     model.classifier[1] = nn.Linear(num_trs, 49)
     model = model.to(device)
-    pth = os.path.join('static', 'resnet8534.pth')
+    pth = 'static\\resnet8776.pth'
     model.load_state_dict(torch.load(pth, weights_only=True, map_location=torch.device('cpu')))
     return model

@@ -61,17 +61,17 @@
                 </div>
             </div>
             <ul>
-                <li><strong>Author Name:</strong> {{ result.author }}</li>
+                <li style="color:white"><strong>Author Name:</strong> {{ result.author }}</li>
 
-                <li><strong>Notable Works:</strong>
+                <li style="color:white"><strong>Notable Works:</strong>
                     <ul>
                         {% for work in result.notable_works %}
                             <li>{{ work }}</li>
                         {% endfor %}
                     </ul>
                 </li>
-                <li><strong>Birthday:</strong> {{ result.birth_date }}</li>
-                <li><strong>Deathday:</strong> {{ result.death_date }}</li>
+                <li style="color:white"><strong>Birthday:</strong> {{ result.birth_date }}</li>
+                <li style="color:white"><strong>Deathday:</strong> {{ result.death_date }}</li>
             </ul>
         </section>
     </main>
