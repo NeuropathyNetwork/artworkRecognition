@@ -47,32 +47,6 @@ class Net(nn.Module):
         return x
 
 
-def predict(test_loader, model, tta=9):
-    model.eval()
-
-    test_pred_tta = None
-    for _ in range(tta):
-        test_pred = []
-        with torch.no_grad():
-            for i, (inputs, target) in enumerate(test_loader):
-                inputs = inputs.cuda()
-                target = target.cuda()
-
-                output = model(inputs)
-                output = output.data.cpu().numpy()
-
-                test_pred.append(output)
-        test_pred = np.vstack(test_pred)
-
-        if test_pred_tta is None:
-            test_pred_tta = test_pred
-        else:
-            test_pred_tta += test_pred
-        # print(test_pred_tta)
-
-    return test_pred_tta
-
-
 def load_model():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Is CUDA available: ", torch.cuda.is_available())
@@ -82,6 +56,6 @@ def load_model():
     num_trs = model.classifier[1].in_features
     model.classifier[1] = nn.Linear(num_trs, 49)
     model = model.to(device)
-    pth = 'static\\resnet1722.pth'
+    pth = 'static\\resnet.pth'
     model.load_state_dict(torch.load(pth, weights_only=True, map_location=torch.device('cpu')))
     return model

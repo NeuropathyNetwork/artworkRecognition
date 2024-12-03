@@ -130,7 +130,6 @@ def analyze(request):
             print(image_file)
             return render(request, 'analyze.html', {'result': result, 'image_url': image_url})
 
-
         except Exception as e:
             print(f"Error during analysis: {str(e)}")
             return render(request, 'analyze.html', {'error': str(e)})
