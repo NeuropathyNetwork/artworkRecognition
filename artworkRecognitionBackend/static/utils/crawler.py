@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import urllib
-
+import os
 
 def fetch_baike_info(key_word):
     """
@@ -26,35 +26,40 @@ def fetch_baike_info(key_word):
     try:
         response = requests.get(url1 + key_word_encoded, headers=headers)
         response.raise_for_status()
-        response.encoding = response.apparent_encoding
+        response.encoding = 'utf-8'
         soup = BeautifulSoup(response.text, 'html.parser')
-
+        # log_dir = 'logs'
+        # if not os.path.exists(log_dir):
+        #     os.makedirs(log_dir)
+        # log_file_path = os.path.join(log_dir, f"{key_word_encoded}.html")
+        # with open(log_file_path, 'w', encoding='utf-8') as log_file:
+        #     log_file.write(response.text)
         meta_description = soup.find('meta', attrs={'name': 'description'})
         if meta_description:
             result["description"] = meta_description.get('content')
 
-        dt_tag = soup.find('dt', class_='basicInfoItem_X788I itemName_H4xlK', string='出生日期')
+        dt_tag = soup.find('dt', class_='basicInfoItem_SxDWH itemName_bMRxC', string='出生日期')
         if dt_tag:
-            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_X788I itemValue_I6jX1')
+            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_SxDWH itemValue_vmzLO')
             if dd_tag:
-                span_tag = dd_tag.find('span', class_='text_X0TgX')
+                span_tag = dd_tag.find('span', class_='text_zAPIw')
                 if span_tag:
                     result["birth_date"] = span_tag.get_text(strip=True)
 
-        dt_tag = soup.find('dt', class_='basicInfoItem_X788I itemName_H4xlK', string='逝世日期')
+        dt_tag = soup.find('dt', class_='basicInfoItem_SxDWH itemName_bMRxC', string='逝世日期')
         if dt_tag:
-            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_X788I itemValue_I6jX1')
+            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_SxDWH itemValue_vmzLO')
             if dd_tag:
-                span_tag = dd_tag.find('span', class_='text_X0TgX')
+                span_tag = dd_tag.find('span', class_='text_zAPIw')
                 if span_tag:
                     result["death_date"] = span_tag.get_text(strip=True)
 
         # 获取代表作品
-        dt_tag = soup.find('dt', class_='basicInfoItem_X788I itemName_H4xlK', string='代表作品')
+        dt_tag = soup.find('dt', class_='basicInfoItem_SxDWH itemName_bMRxC', string='代表作品')
         if dt_tag:
-            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_X788I itemValue_I6jX1')
+            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_SxDWH itemValue_vmzLO')
             if dd_tag:
-                span_tags = dd_tag.find_all('span', class_='text_X0TgX')
+                span_tags = dd_tag.find_all('span', class_='text_zAPIw')
                 for span in span_tags:
                     result["works"].append(span.get_text(strip=True))
 
@@ -70,3 +75,8 @@ def fetch_baike_info(key_word):
         print(f"其他错误: {e}")
 
     return result
+
+# if __name__ == '__main__':
+#     artist = '梵高'
+#     result = fetch_baike_info(artist)
+#     print(result)
