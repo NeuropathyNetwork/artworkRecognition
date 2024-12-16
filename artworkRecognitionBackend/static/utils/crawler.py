@@ -38,30 +38,31 @@ def fetch_baike_info(key_word):
         if meta_description:
             result["description"] = meta_description.get('content')
 
-        dt_tag = soup.find('dt', class_='basicInfoItem_SxDWH itemName_bMRxC', string='出生日期')
+        dt_tag = soup.find('dt', class_='basicInfoItem_vbiBk itemName_fOdwv', string='出生日期')
         if dt_tag:
-            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_SxDWH itemValue_vmzLO')
+            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_vbiBk itemValue_JaQOj')
             if dd_tag:
-                span_tag = dd_tag.find('span', class_='text_zAPIw')
+                span_tag = dd_tag.find('span', class_='text_B_eob')
                 if span_tag:
                     result["birth_date"] = span_tag.get_text(strip=True)
 
-        dt_tag = soup.find('dt', class_='basicInfoItem_SxDWH itemName_bMRxC', string='逝世日期')
+        dt_tag = soup.find('dt', class_='basicInfoItem_vbiBk itemName_fOdwv', string='逝世日期')
         if dt_tag:
-            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_SxDWH itemValue_vmzLO')
+            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_vbiBk itemValue_JaQOj')
             if dd_tag:
-                span_tag = dd_tag.find('span', class_='text_zAPIw')
+                span_tag = dd_tag.find('span', class_='text_B_eob')
                 if span_tag:
                     result["death_date"] = span_tag.get_text(strip=True)
 
         # 获取代表作品
-        dt_tag = soup.find('dt', class_='basicInfoItem_SxDWH itemName_bMRxC', string='代表作品')
+        dt_tag = soup.find('dt', class_='basicInfoItem_vbiBk itemName_fOdwv', string='代表作品')
         if dt_tag:
-            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_SxDWH itemValue_vmzLO')
+            dd_tag = dt_tag.find_next_sibling('dd', class_='basicInfoItem_vbiBk itemValue_JaQOj')
             if dd_tag:
-                span_tags = dd_tag.find_all('span', class_='text_zAPIw')
+                span_tags = dd_tag.find_all('span', class_='text_B_eob')
                 for span in span_tags:
-                    result["works"].append(span.get_text(strip=True))
+                    if span.get_text(strip=True) != "，":
+                        result["works"].append(span.get_text(strip=True))
 
     except requests.exceptions.HTTPError as http_err:
         print(f"HTTP错误: {http_err}")
