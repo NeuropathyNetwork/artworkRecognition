@@ -15,8 +15,19 @@
     padding: 20px;                /* 页面内边距 */
     box-sizing: border-box;
 }
+.info-list {
+    color: white;
+    text-align: left; /* Ensure left alignment */
+}
 
+.info-list > div {
+    margin-bottom: 10px;
+}
 
+.works-list {
+    margin-left: 20px;
+    text-align: left; /* Ensure left alignment */
+}
 .analyze {
     display: flex;
     flex-direction: column;

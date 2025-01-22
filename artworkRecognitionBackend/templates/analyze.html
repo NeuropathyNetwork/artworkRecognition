@@ -47,19 +47,19 @@
                 {% endif %}
             </div>
 
-            <ul>
-                <li style="color:white"><strong>Author Name:</strong> {{ result.author }}</li>
-
-                <li style="color:white"><strong>Notable Works:</strong>
-                    <ul>
+            <div class="info-list">
+                <div><strong>Author Name:</strong> {{ result.author }}</div>
+                <div><strong>Notable Works:</strong>
+                    <div class="works-list">
                         {% for work in result.works %}
-                            <li style="color:white">{{ work }}</li>
+                            <div>{{ work }}</div>
                         {% endfor %}
-                    </ul>
-                </li>
-                <li style="color:white"><strong>Birthday:</strong> {{ result.birth_date }}</li>
-                <li style="color:white"><strong>Deathday:</strong> {{ result.death_date }}</li>
-            </ul>
+                    </div>
+                </div>
+                <div><strong>Birthday:</strong> {{ result.birth_date }}</div>
+                <div><strong>Deathday:</strong> {{ result.death_date }}</div>
+            </div>
+
         </section>
     </main>
 
